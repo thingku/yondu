@@ -1,0 +1,153 @@
+.mainMenu {
+	width: 300px;
+	position: fixed;
+	top:0;
+	right: -260px;
+	height: 100%;
+	z-index: 220;
+}
+
+.mainMenuDetailsHolder {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	height: 100%;
+}
+
+.menuOptionsHolder {
+	display: block;
+	float: left;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.menuOptionsHolder > li {
+	display: inline-block;
+	float: left;
+	overflow: hidden;
+}
+
+.menuToggler {
+	color: #FFF;
+	font-weight: 700;
+	font-size: 20px;
+	text-align: center;
+	background-color: rgba(0,0,0,0.8);
+	width: 40px;
+	cursor: pointer;
+	height: 40px;
+	line-height: 40px;
+}
+
+.menuListHolder {
+	height: 100%;
+	background-color: rgba(84,67,53,0.8);
+	width: 259px;
+	/*width: 0;*/
+	float: left;
+	overflow: hidden;
+}
+
+.menuList {
+	display: block;
+	padding: 0px 0px;
+	width: auto;
+}
+
+.menuList > li {
+	display: inline-block;
+	width: auto;
+	float: left;
+	clear: both;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+.menuList .selectedMenuList {
+	background: -moz-linear-gradient(left,  rgba(84,67,53,1) 0%, rgba(84,67,53,0.98) 2%, rgba(84,67,53,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(84,67,53,1)), color-stop(2%,rgba(84,67,53,0.98)), color-stop(100%,rgba(84,67,53,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(84,67,53,1) 0%,rgba(84,67,53,0.98) 2%,rgba(84,67,53,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(84,67,53,1) 0%,rgba(84,67,53,0.98) 2%,rgba(84,67,53,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(84,67,53,1) 0%,rgba(84,67,53,0.98) 2%,rgba(84,67,53,0) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(84,67,53,1) 0%,rgba(84,67,53,0.98) 2%,rgba(84,67,53,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#544335', endColorstr='#00544335',GradientType=1 ); /* IE6-9 */
+
+}
+
+.menuList > li a {
+	color: #FFF;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.menuIcon {
+	width: 20px;
+	text-align: center;
+	float: left;
+	color: #FFF;
+	line-height: 20px;
+	height: 20px;
+}
+
+.menuLabel {
+	width: 199px;
+	float: left;
+	overflow: hidden;
+	font-weight: 700;
+}
+
+.menuParentChild {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	font-weight: 700;
+}
+
+.menuChlldListHolder {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	font-weight: 700;	
+}
+
+.activeMenu .menuChlldList {
+	display: block;
+}
+
+.menuChlldList {
+	width: 100%;
+	display: none;
+	float: left;
+	overflow: hidden;
+}
+
+.menuChlldList > li {
+	width: auto;
+	float: left;
+	overflow: hidden;
+	clear: both;
+	padding: 10px 0px 10px 15px;
+}
+
+.menuChlldList > li a {
+	font-weight: 700;
+	color: #FFF;
+}
+
+.inactiveCaret {
+	display: block;
+}
+
+.activeCaret {
+	display: none;
+}
+
+.menuToggled .mainHorizontalSlideHolder,
+.menuToggled .mainVerticalSlideHolder {
+ 		-webkit-filter: blur(15px);
+ 	    -moz-filter: blur(15px);
+ 	    -o-filter: blur(15px);
+ 	    -ms-filter: blur(15px);
+ 	    filter: blur(15px);	
+}

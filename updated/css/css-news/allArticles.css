@@ -1,0 +1,50 @@
+.sortPanel{
+	margin: 10px;
+}
+.allArticles-sort{
+	width: 58px;
+	float:left;
+}
+.allArticles-sortDrop{
+	width: 250px;
+	float:left;
+}
+.allArticles-dateForm{
+	float:left;
+	width: 222px;
+	margin-left: 70px;
+}
+.label-form{
+	display: inline!important;
+}
+.btnSort{
+	width:80px;
+	margin-left: 20px;
+}
+.author{
+	float: right;
+	margin: 10px 83px 10px 0px;
+}
+.author>input{
+	width: 202px;
+	height: 40px;
+}
+.dsable{
+	color:gray!important;
+}
+.warn{
+	margin-top:100px;
+}
+tbody{
+	font-weight: normal;
+}
+.categoryOption{
+	float: right;
+	width: 154px;
+	margin: 15px 139px 0px 0px;
+}
+.categoryOption2{
+	float: right;
+	width: 154px;
+	margin: 15px 445px 20px 0px;
+}

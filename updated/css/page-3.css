@@ -1,0 +1,147 @@
+.page-3-Contents {
+	width: 100%;
+	overflow: visible;
+	height: auto;
+	position: relative;
+}
+
+.page-3-contentHolder {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	height: auto;
+	position: relative;
+	background-image: url(../images/bg-strip.jpg);
+	background-repeat: repeat-x;
+}	
+
+.page-3-contentHolder .logoHolder {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+.page-3-contentDetailsHolder {
+	width: 952px;
+	margin: 0px auto;
+	float: none;
+	overflow: hidden;
+}
+
+.page-3-ContentDetails {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+.thumbNailHolder {
+	width: 415px;
+	float: left;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+	height: 254px;
+}
+
+.topTextDetailsHolder {
+	width: 420px;
+	float: right;
+	overflow: hidden;
+}
+
+.columnHolder {
+	width: 150px;
+	float: left;
+	overflow: hidden;
+	padding: 40px;
+	cursor: pointer;
+}
+
+.columnThumbNail {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	text-align: center;
+	padding: 20px 0;
+	opacity: .4;
+	filter:alpha(opacity=40);
+}
+
+.columnHolder:hover .columnThumbNail {
+	opacity: 1;
+	filter:alpha(opacity=100);
+}
+
+.thumbNailTitle {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	font-size: 14px;
+	text-align: center;
+}
+
+.thumbNailTitle a {
+	color: #a50404;
+	font-weight: 700;
+}
+
+.horizontalStripHolder {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	padding: 40px 0 80px;
+}
+
+.softWareProductsHolder {
+	width: 420px;
+	float: left;
+	overflow: hidden;
+}
+
+.softWareLogosHolder {
+	width: 415px;
+	float: right;
+	overflow: hidden;
+	text-align: center;
+}
+
+.softWareLogosHolder img {
+	padding: 20px 0;
+}
+
+.bottomImgHolder {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	padding: 40px 0 0;
+	text-align: center;
+}
+
+.bottomImgHolder img {
+
+}
+
+.thumbNail1 {
+	width: 411px;
+	height: 254px;
+	float: left;
+	overflow: hidden;
+	position: absolute;
+	top:0;
+	background-image: url(../images/doodles/page3/directionicons.png);
+	background-repeat: repeat-x;
+	display: none;	
+}
+
+.thumbNail2 {
+	width: 148px;
+	height: 215px;
+	float: left;
+	overflow: hidden;
+	position: absolute;
+	top:0;
+	background-image: url(../images/doodles/page3/directionpost.png);
+	background-repeat: repeat-x;	
+	right: 60px;
+	display: none;	
+}

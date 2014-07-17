@@ -1,0 +1,162 @@
+.doodlesHolder {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	opacity: 100;	
+}
+
+.doodlesContainer {
+	width: 100%;
+	position: relative;
+	height: 100%;
+}
+
+.doodleList {
+	position: absolute;
+	top:0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 630px;
+	height: 530px;
+}
+
+.doodleListContainer {
+	position: relative;
+	float: left;
+	width: 445px;
+	height: 265px;	
+	padding: 0 0 0 30px;
+}
+
+.doodlesListHolder {
+	width: 445px;
+	float: right;
+	overflow: hidden;
+	position: relative;
+	display: block;
+	height: 265px;
+}
+
+
+/*	@media all  and (max-width: 1000px) { 
+	
+
+
+	}
+
+	@media all and (min-width: 1001px) and (max-width: 1920px) { 
+		
+
+	}
+*/
+.doodlesListHolder > li {
+	display: inline-block;	
+	background-repeat: no-repeat;
+	display: none;
+}
+
+.doodle1 {
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	background-image: url(../images/doodles/thought-bubble1.png);
+	right: 0px;
+	top:10px;
+}
+
+.doodle2 {
+	position: absolute;
+	width: 39px;
+	height: 40px;
+	background-image: url(../images/doodles/thought-bubble2.png);
+	right: 25px;
+	top: 20px;	
+}
+
+.doodle3 {
+	position: absolute;
+	width: 43px;
+	height: 44px;
+	background-image: url(../images/doodles/thought-bubble3.png);
+	right: 75px;
+	top: 10px;	
+}
+
+.doodle4 {
+	position: absolute;
+	width: 47px;
+	height: 54px;
+	background-image: url(../images/doodles/thought-bubble4.png);
+	right: 120px;
+	top: 25px;	
+}
+
+.doodle5 {
+	position: absolute;
+	width: 306px;
+	height: 255px;
+	background-image: url(../images/doodles/thought-bubble5.png);
+	right: 130px;
+	top: 10px;	
+}
+
+.dotHolder {
+	width: 100%;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+
+.dotList {
+	display: block;
+	width: 171px;
+	height: 36px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+}
+
+.dotList > li {
+	width: 36px;
+	height: 36px;
+	float: left;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 0 10px;
+	display: none;
+}
+
+.dot1 {
+	background-image: url(../images/doodles/thought-dot1.png);
+}
+
+.dot2 {
+	background-image: url(../images/doodles/thought-dot2.png);
+}
+
+.dot3 {
+	background-image: url(../images/doodles/thought-dot3.png);
+}
+
+.doodleIdeaHolder {
+	width: 133px;
+	height: 159px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../images/doodles/lightbulb1.png);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+	display: none;	
+}

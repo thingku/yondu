@@ -1,0 +1,153 @@
+.page-5-Contents {
+	width: 100%;
+	overflow: visible;
+	min-height: 1500px;
+	position: relative;
+}
+
+
+.page-5-contentHolder {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	height: 1500px;
+	position: relative;
+	background-image: url(../images/bg6.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom;	
+}	
+
+.page-5-contentDetailsHolder {
+	width: 600px;
+	margin: 0px auto;
+	float: none;
+	overflow: hidden;
+}
+
+.page-5-logoHolder {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	padding: 40px 0 40px;
+	text-align: center;
+}
+
+.mottoHolder {
+	width: 100%;
+	text-align: center;
+	float: left;
+	font-size: 28px;
+	font-family: "daniel";
+	color: #8c8479;
+	font-weight: 700;
+	padding: 0px 0 40px;
+}
+
+.formHolder {
+	width: 600px;
+	margin: 50px auto;
+	float: none;
+	overflow: hidden;
+}
+
+.formElementsHolder {
+	width: 600px;
+	float: left;
+	overflow: hidden;
+}
+
+.formElementsList {
+	display: block;
+	overflow: hidden;
+	float: left;
+	width: 100%;
+}
+
+.formElementsList > li {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	display: inline-block;
+	padding: 5px 0;
+}
+
+.formValidationLabelHolder {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	color: red;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 14px;
+	text-align: right;
+	display: none;
+}
+
+.formLabelHolder {
+	width: 120px;
+	float: left;
+	overflow: hidden;
+	font-weight: 700;
+	text-align: right;
+	padding: 5px 15px 0px 0;
+	font-size: 14px;
+}
+
+.formInputHolder {
+	width: 465px;
+	float: right;
+	overflow: hidden;
+	padding: 0px 0;
+}
+
+.formInputHolder input {
+	width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border: solid 1px #CCC;
+	padding: 4px;
+}
+
+.formInputHolder textarea {
+	width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border: solid 1px #CCC;
+	padding: 4px;
+	height: 150px;
+	resize:none;
+	overflow-y:scroll;
+}
+
+.formButtonsHolder {
+	width: 465px;
+	float: right;
+	overflow: hidden;
+	padding: 5px 0;
+}
+
+.formButtonsHolder button {
+	border: none;
+	padding: 10px 0;
+	width: 230px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.submitBtn {
+	background-color: #009900;
+	color: #FFF;
+	font-size: 14px;
+	font-weight: 700;
+	float: left;
+}
+
+.resetBtn {
+	background-color: #444;
+	color: #FFF;
+	font-size: 14px;
+	font-weight: 700;
+	float: right;
+}

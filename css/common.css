@@ -1,0 +1,208 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+
+html,table,tbody,thead,body,p,a,p,span,div,ul,li,ol,h1,h2,h3,h4,h5,h6,header,nav,details,article,footer,summary,aside,section {
+	line-height: normal;
+	padding: 0;
+	margin: 0;
+	vertical-align: top;
+}
+
+p,h1,h2,h3,h4,h5,h6,li,a,span,div,input,select,textarea {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+div,li,header,nav,section,footer,summary,aside,span {
+	float: left;
+	overflow: hidden;
+	letter-spacing: normal;
+	list-style: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+	background-color: #FFF;
+	position: relative;
+}
+
+h1 {
+	font-size: 38px;
+}
+
+html,body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	position: relative;
+}
+
+br {
+	clear: both;
+}
+
+.body {
+	position: relative;
+}
+
+.logoDetailsHolder {
+	width: auto;
+	float: left;
+	overflow: hidden;
+	padding: 40px;
+}
+
+
+.rightNavigationHolder {
+	width: 35px;
+	position: fixed;
+	right: 40px;
+	height: 100%;
+	z-index: 200;
+}
+
+.leftNavigationHolder {
+	width: 35px;
+	position: fixed;
+	left: 40px;
+	height: 100%;
+	z-index: 200;
+}
+
+.navigationHolder {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.navigation {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	cursor: pointer;
+}
+
+.nextPage {
+	background-image: url(../images/doodles/right.png);
+	width: 32px;
+	height: 60px;
+	opacity: .3;
+	filtr:alpha(opacity-30);	
+}
+
+.nextPage:hover,
+.previousPage:hover {
+	opacity: 1;
+	filtr:alpha(opacity-100);
+}
+
+.previousPage {
+	background-image: url(../images/doodles/left.png);
+	width: 36px;
+	height: 60px;
+	opacity: 1;	
+	opacity: .3;
+	filtr:alpha(opacity-30);	
+}
+
+.page-1-Contents,
+.page-2-Contents,
+.page-3-Contents,
+.page-4-Contents,
+.page-5-Contents {
+	opacity: 1;
+	position: absolute;
+}
+
+.preloaderContainer {
+	width: 100%;
+	background-color: rgba(0,0,0,0.35);
+	position: fixed;
+	top: 0;
+	height: 100%;
+	z-index: 300;
+}
+
+.preloaderHolder {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.preloader {
+	width: 32px;
+	height: 32px;
+	margin: auto;
+	left:0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	position: absolute;
+}
+
+
+.blurred .page-1-Contents,
+.blurred .page-2-Contents,
+.blurred .page-3-Contents,
+.blurred .page-4-Contents,
+.blurred .page-5-Contents {
+ 		-webkit-filter: blur(9px);
+ 	    -moz-filter: blur(9px);
+ 	    -o-filter: blur(9px);
+ 	    -ms-filter: blur(9px);
+ 	    filter: blur(9px);
+}
+
+.pageContents {
+	width: 100%;
+	overflow: visible;
+	position: relative;
+}
+
+.page-1-Contents .pageContents {
+	height: 100%;
+}
+
+.page-2-Contents .pageContents {
+	height: auto;
+}
+
+.page-3-Contents .pageContents {
+	height: auto;
+}
+
+.page-4-Contents .pageContents {
+	height: auto;
+}
+
+.page-5-Contents .pageContents {
+	height: auto;
+}
+
+.menuToggled .page-1-Contents,
+.menuToggled .page-2-Contents,
+.menuToggled .page-3-Contents,
+.menuToggled .page-4-Contents,
+.menuToggled .page-5-Contents {
+ 		-webkit-filter: blur(9px);
+ 	    -moz-filter: blur(9px);
+ 	    -o-filter: blur(9px);
+ 	    -ms-filter: blur(9px);
+ 	    filter: blur(9px);
+}
+
+
+
+/*#roller {
+	width: 100%;
+	height: 100%;
+}*/

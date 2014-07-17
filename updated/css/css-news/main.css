@@ -1,0 +1,81 @@
+@import url('allArticles.css');
+@import url('drafts.css');
+@import url('create_news.css');
+@import url('indexPage.css');
+@import url('article_view.css');
+@import url('create_category.css');
+@import url('add_user.css');
+
+.blurred{
+	-webkit-filter: blur(9px);
+    -moz-filter: blur(9px);
+    -o-filter: blur(9px);
+    -ms-filter: blur(9px);
+    filter: blur(9px);
+}
+
+.save{
+	margin-right: 15px;
+}
+div.pagination {
+	padding: 3px;
+	margin: 3px;
+}
+div.pagination2 {
+	/*position: relative;*/
+	float:right;
+}
+div.pagination,div.pagination2 a {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #AAAADD;
+	float: left;
+	
+	text-decoration: none; /* no underline */
+	color: #444;
+}
+div.pagination,div.pagination2 a:hover, div.pagination,div.pagination2 a:active {
+	border: 1px solid #efab17;
+	color: #444;
+}
+div.pagination,div.pagination2 span.current {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #efab17;
+	float: left;
+	font-weight: bold;
+	background-color: #efab17;
+	color: #FFF;
+}
+div.pagination,div.pagination2 span.disabled {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #EEE;
+	float: left;
+	color: #DDD;
+}
+.addimg{
+	cursor:pointer;
+	width:20px;
+	height:20px;
+}
+.delimg{
+	cursor:pointer;
+	width:20px;
+	height:20px;
+}
+
+/*body{
+	background: url('../img/bg.jpg');
+}*/
+.loginBtn{
+	background: #33FF33;
+	width: 89px;
+	height: 24px;
+	text-align: center;
+	vertical-align: center;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	float: right;
+}

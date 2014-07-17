@@ -1,0 +1,137 @@
+.overLay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	background-color: transparent;
+	overflow: visible;
+	display: none;
+}
+
+.overLayContentsHolder {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	overflow: visible;
+}
+
+.overLayContents {
+	width: 800px;
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: visible;
+	padding: 30px;
+	margin: auto;
+	height: auto;
+}
+
+.thumbClose {
+	width: 100%;
+	height: auto;
+	float: left;
+	overflow: visible;
+}
+
+.thumbDetailsHolder {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+.thumbUpperHolder {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	margin:  0 0 20px 0;
+}
+
+.thumbMidHolder {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+.thumbIconHolder {
+	width: 150px;
+	float: left;
+	overflow: hidden;
+	margin: 0 20px 0 0;
+}
+
+.thumbTitleHolder {
+	width: auto;
+	float: left;
+	overflow: hidden;
+	font-size: 34px;
+	font-family: "daniel";
+	color: #8c8479;
+	font-weight: 700;	
+	padding: 65px 0 0 0;
+}
+
+.thumbMidDetails {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	font-size: 14px;
+	line-height: 18px;
+	color: #444;
+	line-height: 18px;
+}
+
+.thumbMidDetails ul,
+.thumbMidDetails ol {
+	display: block;
+}
+
+.thumbMidDetails ul li {
+	padding: 10px 0;
+	list-style: disc;
+	list-style-position: inside;
+	line-height: 18px;
+	width: 100%;
+}
+
+.thumbMidDetails ol li {
+	padding: 10px 0;
+	list-style: decimal;
+	list-style-position: inside;
+	line-height: 18px;
+	width: 100%;
+}
+
+.thumbCloseHolder {
+	padding: 5px;
+	float: right;
+	text-align: center;
+	margin: 0 0px 0 0;
+	cursor: pointer;
+	opacity: .3;
+	filtr:alpha(opacity-30);
+}
+
+.thumbCloseHolder:hover {
+	opacity: 1;
+	filtr:alpha(opacity-100);	
+}
+
+.thumb1Details,
+.thumb2Details,
+.thumb3Details,
+.thumb4Details {
+	overflow: visible;
+	display: none;
+	opacity: 0;
+}
+
+.activeOverLay {
+	 -webkit-filter: blur(15px);
+ 	 -moz-filter: blur(15px);
+ 	 -o-filter: blur(15px);
+ 	 -ms-filter: blur(15px);
+ 	 filter: blur(15px);	
+}

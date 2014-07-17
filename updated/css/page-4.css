@@ -1,0 +1,132 @@
+.page-4-Contents {
+	width: 100%;
+	overflow: visible;
+	height: 100%;
+	position: relative;
+}
+
+.page-4-contentHolder {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	height: 100%;
+	position: relative;
+	background-image: url(../images/bg5.jpg);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;		
+}	
+
+.page-4-contentHolder .logoHolder {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+.page-4-contentDetailsHolder {
+	width: 952px;
+	margin: 0px auto;
+	float: none;
+	overflow: hidden;
+}
+
+.page-4-ContentDetails {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+.page-4-UpperDetails {
+	width: 50%;
+	float: left;
+	overflow: hidden;
+	clear: both;
+	margin: 0 0 30px;
+}
+
+.page-4-bottomContentHolder {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	background-color: #FFF;
+	padding: 40px 0;
+}
+
+.page-4-contentsDetails {
+	width: 952px;
+	margin: 0 auto;
+	float: none;
+	overflow: hidden;
+}
+
+.page-4-contentsDetails1 {
+	width: 100%;
+	margin: 0 auto;
+	float: none;
+	overflow: hidden;	
+}
+
+.newsAndUpdatesThumbNailHolder {
+	width: 515px;
+	float: left;
+	overflow: hidden;
+}
+
+.newsAndUpdatesThumbNailHolder .textTitle {
+	text-align: center;
+}
+
+.newUpdatesThumbNail {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	text-align: center;	
+}
+
+.newUpdatesThumbNail img {
+	text-align: center;
+}
+
+.newsAndUpdatesDetailsHolder {
+	width: 600px;
+	float: left;
+	overflow: hidden;
+	margin: 30px 0 0 50px;
+}
+
+.newAndUpdatesList {
+	display: block;
+	overflow: hidden;
+	width: 100%;	
+}
+
+.newAndUpdatesList > li {
+	display: inline-block;
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	padding: 20px 0;
+}
+
+.newUpdatesTitle {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	font-size: 14px;
+	margin: 0 0 20px;
+}
+
+.newUpdatesTitle a {
+	color: #efab17;
+	font-weight: 700;
+}
+
+.newUpdatesText {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	font-size: 14px;
+	color: #444;
+	line-height: 18px;
+}

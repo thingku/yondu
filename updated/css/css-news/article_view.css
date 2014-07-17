@@ -1,0 +1,28 @@
+.socialMediaContainer{
+	width: 100%;
+	height:100px;
+}
+.socialMediaHolder{
+	margin:0 auto;
+	width:50%;
+	height:100px;
+}
+.facebookHolder{
+	float:left;
+	cursor: pointer;
+	margin: 30px 96px;
+}
+.twitterHolder{
+	float:left;
+	cursor: pointer;
+	margin: 30px
+}
+.facebook{
+	width: 169px;
+	height: 40px;
+}
+.twitter{
+	width: 169px;
+	height: 40px;
+
+}

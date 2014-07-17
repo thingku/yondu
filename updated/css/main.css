@@ -1,0 +1,66 @@
+@import url('common.css') all;
+@import url('overlay.css') all;
+@import url('page-1.css') all;
+@import url('page-2.css') all;
+@import url('page-3.css') all;
+@import url('page-4.css') all;
+@import url('page-5.css') all;
+@import url('mainmenu.css') all;
+@import url('animate.css') all;
+
+@font-face {
+	font-family: 'daniel';
+    src: url('../fonts/daniel.ttf'); /*URL to font*/
+}
+
+/*REYNIER*/
+
+div.pagination {
+	padding: 3px;
+	margin: 3px;
+}
+
+div.pagination2 {
+	float:right;
+}
+
+div.pagination,div.pagination2 a {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #AAAADD;
+	float: left;
+	
+	text-decoration: none; /* no underline */
+	color: #444;
+}
+div.pagination,div.pagination2 a:hover, div.pagination,div.pagination2 a:active {
+	border: 1px solid #efab17;
+	color: #444;
+}
+div.pagination,div.pagination2 span.current {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #efab17;
+	float: left;
+	font-weight: bold;
+	background-color: #efab17;
+	color: #FFF;
+}
+div.pagination,div.pagination2 span.disabled {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #EEE;
+	float: left;
+	color: #DDD;
+}
+.loginBtn{
+	background: #33FF33;
+	width: 89px;
+	height: 24px;
+	text-align: center;
+	vertical-align: center;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	float: right;
+}
