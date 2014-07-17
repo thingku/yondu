@@ -14,7 +14,30 @@
 
 		$ini_array = parse_ini_file("config.ini");
 
-		require_once( "EmailPHP/Mail.php");
+		$msg = "From: ".$fullName." <".$emailSender.">\n".
+				"Company: ".$company."\n".
+				"Address: ".$address."\n".
+				"Contact: ".$contact."\n\n\n".
+				$message;
+
+	   // use wordwrap() if lines are longer than 70 characters
+	   $msg = wordwrap($msg,70);
+
+
+	   // send email
+	   $x = mail("dummyyondu@gmail.com",$ini_array['Subject'],$msg,$emailSender);
+
+	   if ( $x == true ) {
+
+	           header("location:page-5.php?send=1");
+
+	   } else {
+
+	           echo "message not sent";
+
+	   }
+
+		/*require_once( "EmailPHP/Mail.php");
 
 		require_once("EmailPHP/Mail/Mail_Mime-1.8.5/Mail/mime.php");
 		
@@ -51,7 +74,7 @@
 		  } else {
 
 		   header("location:page-5.php?send=1");
-		  }
+		  }*/
 
 	}
 								
