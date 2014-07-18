@@ -35,7 +35,9 @@
 
 							<div class="navigationHolder">
 
-								<div class="navigation nextPage"></div>
+								<div class="navigation nextPage">
+
+								</div>
 
 							</div>
 
