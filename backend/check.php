@@ -39,7 +39,7 @@ ob_start();
 		
 		$page=$_POST['page'];
 
-		header("location:../page-4.php?page=$page");
+		header("location:../about-yondu.php?page=$page");
 
 	}
 

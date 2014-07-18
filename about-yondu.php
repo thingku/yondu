@@ -1,3 +1,6 @@
+<?php
+	ob_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -127,7 +130,7 @@
 					$_SESSION['old_count_articles']=$total_pages;
 
 					/* Setup vars for query. */
-					$targetpage = "page-4.php"; 
+					$targetpage = "about-yondu.php"; 
 					//$targetpage = 'index.php';	
 
 					$limit = 3;
@@ -349,7 +352,8 @@
 
 	</div>
 
-	<?php include 'mainmenu.php'; ?>
+
+<?php include 'mainmenu.php'; ?>
 
 </body>
 
@@ -376,3 +380,8 @@
 	</script>
 
 </html>
+<?php
+
+ob_end_flush();
+
+?>
