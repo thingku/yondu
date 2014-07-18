@@ -2,31 +2,28 @@
 <html>
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">		
-	<title>Whole Page Vertical and Horizontal Scroll</title>
-	<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-	<script type="text/javascript" src="js/modernizr.custom.js"></script>
-	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+	<title>YONDU | Giving Life to Ideas</title>
 	<link rel="stylesheet" href="js/font-awesome/css/font-awesome.min.css"/>
-	<script type="text/javascript" src="js/library.js"></script>
 	<link rel="stylesheet" media="all" href="css/main.css"/>
-	
-	<script type="text/javascript">
-
-		$(document).ready(function(e){ 	
-
-			$().navigatePage();
-
-			$().detectClientDevice();
-
-			$().page2();
-			
-		});
-
-	</script>
 
 </head>
-<body id="page2">
+<body id="page2" class="blurred">
+
+		<div class="preloaderContainer">
+
+			<div class="preloaderHolder">
+
+				<div class="preloader">
+
+					<img src="images/ajax-loader.gif" />
+
+				</div>
+
+			</div>
+
+		</div>	
 
 		<div class="page-2-Contents pageContentHolder">
 
@@ -147,7 +144,7 @@
 
 							<div class="topTextDetailsHolder3">
 
-								<div class="smallNavigationHolder toNextPage">
+								<div class="smallNavigationHolder productsAndServices">
 
 									<div class="navigationLabel">
 
@@ -175,7 +172,28 @@
 
 		</div>
 
-
+		<?php include 'mainmenu.php'; ?>
 
 </body>
+
+	<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="js/library.js"></script>	
+	<script type="text/javascript" src="js/modernizr.custom.js"></script>
+	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>	
+	<script type="text/javascript">
+
+		$(document).ready(function(e){ 	
+
+			$().animatePage();
+
+			$().detectClientDevice();
+
+			$().page2();
+
+			$().mainMenu();
+			
+		});
+
+	</script>
+
 </html>

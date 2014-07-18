@@ -1,5 +1,15 @@
 (function($) {
 
+    var p1 = 'index.php';
+
+    var p2 = 'giving-life-to-ideas.php';
+
+    var p3 = 'products-and-services.php';
+
+    var p4 = 'about-yondu.php';
+
+    var p5 = 'get-in-touch.php';    
+
     $.fn.mainMenu = function() {
 
         $('body').click(function() {
@@ -87,1093 +97,63 @@
 
             var cw = $('body').outerWidth();
 
+            var bid = $('body').attr('id');   
+
+            if ( bid == 'page1' ) {
+
+                    $('.menuList > li').removeClass('selectedMenuList');
+
+                    $('.page-1').parent().addClass('selectedMenuList');
+
+            } else if ( bid == 'page2' ) {
+
+                    $('.menuList > li').removeClass('selectedMenuList');
+
+                    $('.page-2').parent().addClass('selectedMenuList');
+
+            } else if ( bid == 'page3' ) {
+
+                    $('.menuList > li').removeClass('selectedMenuList');                    
+
+                    $('.page-3').parent().addClass('selectedMenuList');
+
+            } else if ( bid == 'page4') {
+
+                    $('.menuList > li').removeClass('selectedMenuList');
+
+                    $('.page-4').parent().addClass('selectedMenuList');
+
+            } else if ( bid == 'page5' ) {
+
+                    $('.menuList > li').removeClass('selectedMenuList');
+
+                    $('.page-5').parent().addClass('selectedMenuList');
+
+            }                 
+
             $(this).click(function() {
 
-                var cc = $(this).children('a').attr('class');
+                var sp = $(this).children().attr('class');
 
-                var rc = $('.pageContentHolder').attr('class').split(' ')[0];
+                if ( sp == 'page-1' ) {
 
-                var aa;
+                    window.location.href = p1;
 
-                var oc;
+                } else if ( sp == 'page-2' ) {
 
-                switch (cc) {
+                    window.location.href = p2;
 
-                    case 'page-1':
+                } else if ( sp == 'page-3' ) {
 
-                        if ( rc == 'page-1-Contents' ) {
+                    window.location.href = p3;
 
-                        } else if ( rc == 'page-2-Contents') {
+                } else if ( sp == 'page-4') {
 
-                            $('.preloaderContainer').fadeIn(500);
+                    window.location.href = p4;
 
-                            $('.'+rc).addClass('animated fadeOutLeft');
+                } else if ( sp == 'page-5' ) {
 
-                            $('.'+rc).animate({
-
-                                'left' : cw + 'px'
-
-                            }, 400, function() {
-
-                                $(this).remove();
-
-                                $('body').removeClass('page-2-active').addClass('page-1-active blurred');
-
-                                    $.get(cc+'.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-1-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-1-active');
-
-                                            $().page1(); 
-
-                                            window.location.hash = "1";
-
-                                            $('.mainMenu').animate({
-
-                                                'right' : '-260px'
-
-                                            },150);
-
-                                            $('body').removeClass('menuToggled');  
-
-                                            $(document).attr('title', 'YONDU');                                          
-
-                                        });
-
-                                    });                      
-                                
-                            } );
-
-                        } else if ( rc == 'page-3-Contents') {
-
-                            $('.preloaderContainer').fadeIn(500);
-
-                            $('.'+rc).addClass('animated fadeOutLeft');
-
-                            $('.'+rc).animate({
-
-                                'left' : cw + 'px'
-
-                            }, 400, function() {
-
-                                $(this).remove();
-
-                                $('body').removeClass('page-3-active').addClass('page-1-active blurred');
-
-                                    $.get(cc+'.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-1-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-1-active');
-
-                                            $().page1(); 
-
-                                            window.location.hash = "1";
-
-                                            $('.mainMenu').animate({
-
-                                                'right' : '-260px'
-
-                                            },150);
-
-                                            $('body').removeClass('menuToggled');
-
-                                            $(document).attr('title', 'YONDU');                                             
-
-                                        });
-
-                                    });                      
-                                
-                            } );
-
-                        } else if ( rc == 'page-4-Contents') {
-
-                            $('.preloaderContainer').fadeIn(500);
-
-                            $('.'+rc).addClass('animated fadeOutLeft');
-
-                            $('.'+rc).animate({
-
-                                'left' : cw + 'px'
-
-                            }, 400, function() {
-
-                                $(this).remove();
-
-                                $('body').removeClass('page-4-active').addClass('page-1-active blurred');
-
-                                    $.get(cc+'.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-1-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-1-active');
-
-                                            $().page1(); 
-
-                                            window.location.hash = "1";
-
-                                            $('.mainMenu').animate({
-
-                                                'right' : '-260px'
-
-                                            },150);
-
-                                            $('body').removeClass('menuToggled');   
-
-                                            $(document).attr('title', 'YONDU');                                          
-
-                                        });
-
-                                    });                      
-                                
-                            } );                            
-
-                        } else if ( rc == 'page-5-Contents') {
-
-                            $('.preloaderContainer').fadeIn(500);
-
-                            $('.'+rc).addClass('animated fadeOutLeft');
-
-                            $('.'+rc).animate({
-
-                                'left' : cw + 'px'
-
-                            }, 400, function() {
-
-                                $(this).remove();
-
-                                $('body').removeClass('page-5-active').addClass('page-1-active blurred');
-
-                                    $.get(cc+'.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-1-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-1-active');
-
-                                            $().page1(); 
-
-                                            window.location.hash = "1";
-
-                                            $('.mainMenu').animate({
-
-                                                'right' : '-260px'
-
-                                            },150);
-
-                                            $('body').removeClass('menuToggled');   
-
-                                            $(document).attr('title', 'YONDU');                                          
-
-                                        });
-
-                                    });                      
-                                
-                            } );
-
-                        }     
-
-                        $('.menuList > li').removeClass('selectedMenuList');
-
-                        $(this).closest('li').addClass('selectedMenuList');
-
-                    break;  
-
-                    case 'page-2':
-                    
-                        if ( rc == 'page-1-Contents' ) {
-
-                            $('.preloaderContainer').fadeIn(500);
-
-                            $('.'+rc).addClass('animated fadeOutLeft');
-
-                            $('.'+rc).animate({
-
-                                'left' : '-'+cw + 'px'
-
-                            }, 400, function() {
-
-                                $(this).remove();
-
-                                $('body').removeClass('page-1-active').addClass('page-2-active blurred');
-
-                                    $.get(cc+'.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-2-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-2-active');
-
-                                            $().page1(); 
-
-                                            window.location.hash = "2";
-
-                                            $('.mainMenu').animate({
-
-                                                'right' : '-260px'
-
-                                            },150);
-
-                                            $('body').removeClass('menuToggled');   
-
-                                            $(document).attr('title', 'Giving life to ideas - YONDU');                                         
-
-                                        });
-
-                                    });                      
-                                
-                            } );
-
-                        } else if ( rc == 'page-2-Contents' ) {
-
-
-                        } else if ( rc == 'page-3-Contents' ) {
-
-                            $('.preloaderContainer').fadeIn(500);
-
-                            $('.'+rc).addClass('animated fadeOutLeft');
-
-                            $('.'+rc).animate({
-
-                                'left' : cw + 'px'
-
-                            }, 400, function() {
-
-                                $(this).remove();
-
-                                $('body').removeClass('page-3-active').addClass('page-2-active blurred');
-
-                                    $.get(cc+'.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-2-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-2-active'); 
-
-                                            window.location.hash = "2";
-
-                                            $('.mainMenu').animate({
-
-                                                'right' : '-260px'
-
-                                            },150);
-
-                                            $('body').removeClass('menuToggled');   
-
-                                            $(document).attr('title', 'Giving life to ideas - YONDU');                                         
-
-                                        });
-
-                                    });                      
-                                
-                            } );
-
-                        } else if ( rc == 'page-4-Contents' ) {
-
-                            $('.preloaderContainer').fadeIn(500);
-
-                            $('.'+rc).addClass('animated fadeOutLeft');
-
-                            $('.'+rc).animate({
-
-                                'left' : +cw + 'px'
-
-                            }, 400, function() {
-
-                                $(this).remove();
-
-                                $('body').removeClass('page-4-active').addClass('page-2-active blurred');
-
-                                    $.get(cc+'.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-2-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-2-active'); 
-
-                                            window.location.hash = "2";
-
-                                            $('.mainMenu').animate({
-
-                                                'right' : '-260px'
-
-                                            },150);
-
-                                            $('body').removeClass('menuToggled');     
-
-                                            $(document).attr('title', 'Giving life to ideas - YONDU');                                       
-
-                                        });
-
-                                    });                      
-                                
-                            } );
-
-                        } else if ( rc == 'page-5-Contents' ) {
-
-                            $('.preloaderContainer').fadeIn(500);
-
-                            $('.'+rc).addClass('animated fadeOutLeft');
-
-                            $('.'+rc).animate({
-
-                                'left' : cw + 'px'
-
-                            }, 400, function() {
-
-                                $(this).remove();
-
-                                $('body').removeClass('page-5-active').addClass('page-2-active blurred');
-
-                                    $.get(cc+'.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-2-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-2-active'); 
-
-                                            window.location.hash = "2";
-
-                                            $('.mainMenu').animate({
-
-                                                'right' : '-260px'
-
-                                            },150);
-
-                                            $('body').removeClass('menuToggled');      
-
-                                            $(document).attr('title', 'Giving life to ideas - YONDU');                                      
-
-                                        });
-
-                                    });                      
-                                
-                            } );
-
-                        }
-
-                        $('.menuList > li').removeClass('selectedMenuList');
-
-                        $(this).closest('li').addClass('selectedMenuList');                        
-
-                    break;
-
-                    case 'page-3':
-                    
-                        if ( rc == 'page-1-Contents' ) {
-
-                            $('.preloaderContainer').fadeIn(500);
-
-                            $('.'+rc).addClass('animated fadeOutLeft');
-
-                            $('.'+rc).animate({
-
-                                'left' : '-'+cw + 'px'
-
-                            }, 400, function() {
-
-                                $(this).remove();
-
-                                $('body').removeClass('page-1-active').addClass('page-3-active blurred');
-
-                                    $.get(cc+'.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-3-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-3-active'); 
-
-                                            window.location.hash = "3";
-
-                                            $('.mainMenu').animate({
-
-                                                'right' : '-260px'
-
-                                            },150);
-
-                                            $('body').removeClass('menuToggled');      
-
-                                            $(document).attr('title', 'Products and Services - YONDU');                                      
-
-                                        });
-
-                                    });                      
-                                
-                            } );
-
-                        } else if ( rc == 'page-2-Contents' ) {
-
-                            $('.preloaderContainer').fadeIn(500);
-
-                            $('.'+rc).addClass('animated fadeOutLeft');
-
-                            $('.'+rc).animate({
-
-                                'left' : '-'+cw + 'px'
-
-                            }, 400, function() {
-
-                                $(this).remove();
-
-                                $('body').removeClass('page-2-active').addClass('page-3-active blurred');
-
-                                    $.get(cc+'.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-3-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-3-active'); 
-
-                                            window.location.hash = "3";
-
-                                            $('.mainMenu').animate({
-
-                                                'right' : '-260px'
-
-                                            },150);
-
-                                            $('body').removeClass('menuToggled');    
-
-                                            $(document).attr('title', 'Products and Services - YONDU');                                         
-
-                                        });
-
-                                    });                      
-                                
-                            } );
-
-                        } else if ( rc == 'page-3-Contents' ) {
-
-
-                        } else if ( rc == 'page-4-Contents' ) {
-
-                            $('.preloaderContainer').fadeIn(500);
-
-                            $('.'+rc).addClass('animated fadeOutLeft');
-
-                            $('.'+rc).animate({
-
-                                'left' : cw + 'px'
-
-                            }, 400, function() {
-
-                                $(this).remove();
-
-                                $('body').removeClass('page-4-active').addClass('page-3-active blurred');
-
-                                    $.get(cc+'.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-3-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-3-active'); 
-
-                                            window.location.hash = "3";
-
-                                            $('.mainMenu').animate({
-
-                                                'right' : '-260px'
-
-                                            },150);
-
-                                            $('body').removeClass('menuToggled');   
-
-                                            $(document).attr('title', 'Products and Services - YONDU');                                          
-
-                                        });
-
-                                    });                      
-                                
-                            } );
-
-                        } else if ( rc == 'page-5-Contents' ) {
-
-                            $('.preloaderContainer').fadeIn(500);
-
-                            $('.'+rc).addClass('animated fadeOutLeft');
-
-                            $('.'+rc).animate({
-
-                                'left' : cw + 'px'
-
-                            }, 400, function() {
-
-                                $(this).remove();
-
-                                $('body').removeClass('page-5-active').addClass('page-3-active blurred');
-
-                                    $.get(cc+'.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-3-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-3-active'); 
-
-                                            window.location.hash = "3";
-
-                                            $('.mainMenu').animate({
-
-                                                'right' : '-260px'
-
-                                            },150);
-
-                                            $('body').removeClass('menuToggled');      
-
-                                            $(document).attr('title', 'Products and Services - YONDU');                                       
-
-                                        });
-
-                                    });                      
-                                
-                            } );
-
-                        }
-
-                        $('.menuList > li').removeClass('selectedMenuList');
-
-                        $(this).closest('li').addClass('selectedMenuList');                        
-
-                    break;
-
-                    case 'page-4':
-                    
-                        if ( rc == 'page-1-Contents' ) {
-
-                            $('.preloaderContainer').fadeIn(500);
-
-                            $('.'+rc).addClass('animated fadeOutLeft');
-
-                            $('.'+rc).animate({
-
-                                'left' : '-'+cw + 'px'
-
-                            }, 400, function() {
-
-                                $(this).remove();
-
-                                $('body').removeClass('page-1-active').addClass('page-4-active blurred');
-
-                                    $.get(cc+'.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-4-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-4-active'); 
-
-                                            window.location.hash = "4";
-
-                                            $('.mainMenu').animate({
-
-                                                'right' : '-260px'
-
-                                            },150);
-
-                                            $('body').removeClass('menuToggled');   
-
-                                            $(document).attr('title', 'About Us - YONDU');                                          
-
-                                        });
-
-                                    });                      
-                                
-                            } );
-
-                        } else if ( rc == 'page-2-Contents' ) {
-
-                            $('.preloaderContainer').fadeIn(500);
-
-                            $('.'+rc).addClass('animated fadeOutLeft');
-
-                            $('.'+rc).animate({
-
-                                'left' : '-'+cw + 'px'
-
-                            }, 400, function() {
-
-                                $(this).remove();
-
-                                $('body').removeClass('page-2-active').addClass('page-4-active blurred');
-
-                                    $.get(cc+'.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-4-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-4-active'); 
-
-                                            window.location.hash = "4";
-
-                                            $('.mainMenu').animate({
-
-                                                'right' : '-260px'
-
-                                            },150);
-
-                                            $('body').removeClass('menuToggled');  
-
-                                            $(document).attr('title', 'About Us - YONDU');                                             
-
-                                        });
-
-                                    });                      
-                                
-                            } );
-
-                        } else if ( rc == 'page-3-Contents' ) {
-
-                            $('.preloaderContainer').fadeIn(500);
-
-                            $('.'+rc).addClass('animated fadeOutLeft');
-
-                            $('.'+rc).animate({
-
-                                'left' : '-' + cw + 'px'
-
-                            }, 400, function() {
-
-                                $(this).remove();
-
-                                $('body').removeClass('page-3-active').addClass('page-4-active blurred');
-
-                                    $.get(cc+'.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-4-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-4-active'); 
-
-                                            window.location.hash = "4";
-
-                                            $('.mainMenu').animate({
-
-                                                'right' : '-260px'
-
-                                            },150);
-
-                                            $('body').removeClass('menuToggled');  
-
-                                            $(document).attr('title', 'About Us - YONDU');                                             
-
-                                        });
-
-                                    });                      
-                                
-                            } );
-
-                        } else if ( rc == 'page-4-Contents' ) {
-
-
-
-                        } else if ( rc == 'page-5-Contents' ) {
-
-                            $('.preloaderContainer').fadeIn(500);
-
-                            $('.'+rc).addClass('animated fadeOutLeft');
-
-                            $('.'+rc).animate({
-
-                                'left' : cw + 'px'
-
-                            }, 400, function() {
-
-                                $(this).remove();
-
-                                $('body').removeClass('page-5-active').addClass('page-4-active blurred');
-
-                                    $.get(cc+'.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-4-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-4-active'); 
-
-                                            window.location.hash = "4";
-
-                                            $('.mainMenu').animate({
-
-                                                'right' : '-260px'
-
-                                            },150);
-
-                                            $('body').removeClass('menuToggled');  
-
-                                            $(document).attr('title', 'About Us - YONDU');                                             
-
-                                        });
-
-                                    });                      
-                                
-                            } );
-
-                        }
-
-                        $('.menuList > li').removeClass('selectedMenuList');
-
-                        $(this).closest('li').addClass('selectedMenuList');                        
-
-                    break; 
-
-                    case 'page-5':
-                    
-                        if ( rc == 'page-1-Contents' ) {
-
-                            $('.preloaderContainer').fadeIn(500);
-
-                            $('.'+rc).addClass('animated fadeOutLeft');
-
-                            $('.'+rc).animate({
-
-                                'left' : '-'+cw + 'px'
-
-                            }, 400, function() {
-
-                                $(this).remove();
-
-                                $('body').removeClass('page-1-active').addClass('page-5-active blurred');
-
-                                    $.get(cc+'.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-5-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-5-active'); 
-
-                                            window.location.hash = "5";
-
-                                            $('.mainMenu').animate({
-
-                                                'right' : '-260px'
-
-                                            },150);
-
-                                            $('body').removeClass('menuToggled');  
-
-                                            $(document).attr('title', 'Get in Touch - YONDU');                                             
-
-                                        });
-
-                                    });                      
-                                
-                            } );
-
-                        } else if ( rc == 'page-2-Contents' ) {
-
-                            $('.preloaderContainer').fadeIn(500);
-
-                            $('.'+rc).addClass('animated fadeOutLeft');
-
-                            $('.'+rc).animate({
-
-                                'left' : '-'+cw + 'px'
-
-                            }, 400, function() {
-
-                                $(this).remove();
-
-                                $('body').removeClass('page-2-active').addClass('page-5-active blurred');
-
-                                    $.get(cc+'.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-5-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-5-active'); 
-
-                                            window.location.hash = "5";
-
-                                            $('.mainMenu').animate({
-
-                                                'right' : '-260px'
-
-                                            },150);
-
-                                            $('body').removeClass('menuToggled');   
-
-                                            $(document).attr('title', 'Get in Touch - YONDU');                                            
-
-                                        });
-
-                                    });                      
-                                
-                            } );
-
-                        } else if ( rc == 'page-3-Contents' ) {
-
-                            $('.preloaderContainer').fadeIn(500);
-
-                            $('.'+rc).addClass('animated fadeOutLeft');
-
-                            $('.'+rc).animate({
-
-                                'left' : '-' + cw + 'px'
-
-                            }, 400, function() {
-
-                                $(this).remove();
-
-                                $('body').removeClass('page-3-active').addClass('page-5-active blurred');
-
-                                    $.get(cc+'.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-5-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-5-active'); 
-
-                                            window.location.hash = "5";
-
-                                            $('.mainMenu').animate({
-
-                                                'right' : '-260px'
-
-                                            },150);
-
-                                            $('body').removeClass('menuToggled');   
-
-                                            $(document).attr('title', 'Get in Touch - YONDU');                                          
-
-                                        });
-
-                                    });                      
-                                
-                            } );
-
-                        } else if ( rc == 'page-4-Contents' ) {
-
-                            $('.preloaderContainer').fadeIn(500);
-
-                            $('.'+rc).addClass('animated fadeOutLeft');
-
-                            $('.'+rc).animate({
-
-                                'left' : '-'+cw + 'px'
-
-                            }, 400, function() {
-
-                                $(this).remove();
-
-                                $('body').removeClass('page-4-active').addClass('page-5-active blurred');
-
-                                    $.get(cc+'.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-5-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-5-active'); 
-
-                                            window.location.hash = "5";
-
-                                            $('.mainMenu').animate({
-
-                                                'right' : '-260px'
-
-                                            },150);
-
-                                            $('body').removeClass('menuToggled');    
-
-                                            $(document).attr('title', 'Get in Touch - YONDU');                                         
-
-                                        });
-
-                                    });                      
-                                
-                            } );
-
-
-                        } else if ( rc == 'page-5-Contents' ) {
-
-
-                        }
-
-                        $('.menuList > li').removeClass('selectedMenuList');
-
-                        $(this).closest('li').addClass('selectedMenuList');                        
-
-                    break;                                                           
+                    window.location.href = p5;
 
                 }
 
@@ -1185,60 +165,66 @@
 
     $.fn.page1 = function() {
 
+        $(window).load(function() {
+
+            $('.preloaderContainer').fadeOut();
+
+            $('body').removeClass('blurred');
+
             setTimeout(function() {
 
                 $('.bubble1').fadeIn(400);
 
-            },2000);
+            },1000);
 
             setTimeout(function() {
 
                 $('.bubble2').fadeIn(400);
 
-            },2200);  
+            },1200);  
 
             setTimeout(function() {
 
                 $('.bubble3').fadeIn(400);
 
-            },2400);  
+            },1400);  
 
             setTimeout(function() {
 
                 $('.bubble4').fadeIn(400);
 
-            },2600);
+            },1600);
 
             setTimeout(function() {
 
                 $('.bubble5').fadeIn(400);
 
-            },2800); 
+            },1800); 
 
             setTimeout(function() {
 
                 $('.dot1').fadeIn(400);
 
-            },3000); 
+            },2000); 
 
             setTimeout(function() {
 
                 $('.dot2').fadeIn(400);
 
-            },3200); 
+            },2200); 
 
             setTimeout(function() {
 
                 $('.dot3').fadeIn(400);
 
 
-            },3400);
+            },2400);
 
             setTimeout(function() {
 
                 $('.bubbleList > li').fadeOut(400);
                 
-            },4000);             
+            },3000);             
 
             setTimeout(function() {
 
@@ -1248,11 +234,39 @@
 
                 $('.page-1-textDetails').fadeIn(400);
 
-            },4500);                                                                                        
+            },3500);
+
+        });   
+
+        $('.givingLifeToIdeas').click(function() {
+
+            var cw = $('body').outerWidth();
+
+            var pc = $('.pageContentHolder');
+
+            pc.animate({
+
+                    'marginLeft' : '-' + cw + 'px'
+
+            },300, function() {
+
+                    window.location.href = p2;
+
+            });
+
+        });                                                                                            
 
     }
 
     $.fn.page2 = function() {
+
+        $(window).load(function() {
+
+            $('.preloaderContainer').fadeOut();
+
+            $('body').removeClass('blurred');
+
+        });        
 
         $('.toBottomContent').click(function() {
 
@@ -1368,23 +382,49 @@
 
         }); 
 
+        $('.productsAndServices').click(function() {
+
+            var cw = $('body').outerWidth();
+
+            var pc = $('.pageContentHolder');
+
+            pc.animate({
+
+                    'marginLeft' : '-' + cw + 'px'
+
+            },300, function() {
+
+                    window.location.href = p3;
+
+            });            
+                
+        });
+
     }
 
     $.fn.page3 = function() {
 
-        $(window).scrollTop(0);
+        $(window).load(function() {
 
-        setTimeout(function() {
+            $('.preloaderContainer').fadeOut();
 
-            $('.thumbNail1').fadeIn(400);
+            $('body').removeClass('blurred');
 
-        },2000);
+            setTimeout(function() {
 
-        setTimeout(function() {
+                $('.thumbNail1').fadeIn(400);
 
-            $('.thumbNail2').fadeIn(400);
+            },2000);
 
-        },1000);
+            setTimeout(function() {
+
+                $('.thumbNail2').fadeIn(400);
+
+            },1000);
+
+        });
+
+        $(window).scrollTop(0);        
 
         $('.columnHolder').each(function() {
 
@@ -1448,645 +488,35 @@
 
         });
 
-    }                
+    }   
 
-    $.fn.navigatePage = function() {
-
-        var cw = $('body').outerWidth();
-
-        var cp;
-
-        var cookie;
-
-        var currentClass;
+    $.fn.page4 = function() {
 
         $(window).load(function() {
 
-            var hash = location.hash;
+            $('.preloaderContainer').fadeOut();
 
-            if(hash=="#2"){
+            $('body').removeClass('blurred');
 
-                $.get('page-2.php',function(data){
-
-                    $('#roller').append(data);
-
-                    $('.page-2-Contents').animate({
-
-                        'opacity' : '100'
-
-                    },800, function() {
-
-                        $('.preloaderContainer').fadeOut(1500);
-
-                        $('body').removeClass('blurred'); 
-
-                        $('body').addClass('page-2-active'); 
-
-                        $().page1(); 
-
-                        window.location.hash = "2";   
-
-                        var x =  '.' + $('.pageContentHolder').attr('class').split(' ')[0].replace('-Contents','');
-
-                        $('.menuList > li').removeClass('selectedMenuList');
-
-                        $(x).closest('li').addClass('selectedMenuList');
-
-                        $(document).attr('title', 'Giving life to ideas - YONDU');
-         
-
-                    });
-
-                });
-
-            } else  if (hash=="#3"){
-
-                $.get('page-3.php',function(data){
-
-                    $('#roller').append(data);
-
-                    $('.page-3-Contents').animate({
-
-                        'opacity' : '100'
-
-                    },800, function() {
-
-                        $('.preloaderContainer').fadeOut(1500);
-
-                        $('body').removeClass('blurred'); 
-
-                        $('body').addClass('page-3-active'); 
-
-                        $().page1(); 
-
-                        window.location.hash = "3"; 
-
-                        var x =  '.' + $('.pageContentHolder').attr('class').split(' ')[0].replace('-Contents','');
-
-                        $('.menuList > li').removeClass('selectedMenuList');
-
-                        $(x).closest('li').addClass('selectedMenuList');   
-
-                        $(document).attr('title', 'Products and Services - YONDU');                                 
-
-                    });
-
-                });
-
-            } else  if (hash=="#4"){
-
-                $.get('page-4.php',function(data){
-
-                    $('#roller').append(data);
-
-                    $('.page-4-Contents').animate({
-
-                        'opacity' : '100'
-
-                    },800, function() {
-
-                        $('.preloaderContainer').fadeOut(1500);
-
-                        $('body').removeClass('blurred'); 
-
-                        $('body').addClass('page-4-active'); 
-
-                        $().page1(); 
-
-                        window.location.hash = "4";
-
-                        var x =  '.' + $('.pageContentHolder').attr('class').split(' ')[0].replace('-Contents','');
-
-                        $('.menuList > li').removeClass('selectedMenuList');
-
-                        $(x).closest('li').addClass('selectedMenuList'); 
-
-                        $(document).attr('title', 'About Us - YONDU');                                    
-
-                    });
-
-                });
-
-            } else  if (hash=="#5"){
-
-                $.get('page-5.php',function(data){
-
-                    $('#roller').append(data);
-
-                    $('.page-5-Contents').animate({
-
-                        'opacity' : '100'
-
-                    },800, function() {
-
-                        $('.preloaderContainer').fadeOut(1500);
-
-                        $('body').removeClass('blurred'); 
-
-                        $('body').addClass('page-5-active'); 
-
-                        $().page1(); 
-
-                        window.location.hash = "5";
-
-                        var x =  '.' + $('.pageContentHolder').attr('class').split(' ')[0].replace('-Contents','');
-
-                        $('.menuList > li').removeClass('selectedMenuList');
-
-                        $(x).closest('li').addClass('selectedMenuList');   
-
-                        $(document).attr('title', 'Get in Touch - YONDU');                                 
-
-                    });
-
-                });
-
-            } else {
-
-                $.get('page-1.php',function(data){
-
-                    $('#roller').append(data);
-
-                    $('.page-1-Contents').animate({
-
-                        'opacity' : '100'
-
-                    },800, function() {
-
-                        $('.preloaderContainer').fadeOut(1500);
-
-                        $('body').removeClass('blurred'); 
-
-                        $('body').addClass('page-1-active'); 
-
-                        $().page1(); 
-
-                         window.location.hash = "1";
-
-                        var x =  '.' + $('.pageContentHolder').attr('class').split(' ')[0].replace('-Contents','');
-
-                        $('.menuList > li').removeClass('selectedMenuList');
-
-                        $(x).closest('li').addClass('selectedMenuList');  
-
-                        $(document).attr('title', 'YONDU');                       
-                      
-                    });
-
-                });
-            }
-        
         });
 
-        $('.nextPage,.toNextPage').click(function() {
+    } 
 
-    
-            if ( $('body').hasClass('page-1-active') ) {
+    $.fn.page5 = function() {
 
-                $('.preloaderContainer').fadeIn(500);
+        $(window).load(function() {
 
-                $('.page-1-Contents').addClass('animated fadeOutLeft');
+            $('.preloaderContainer').fadeOut();
 
-                $('.page-1-Contents').animate({
+            $('body').removeClass('blurred');
 
-                    'left' : '-' + cw + 'px'
+        });
 
-                }, 400, function() {
-
-                    $(this).remove();
-
-                    $('body').removeClass('page-1-active').addClass('page-2-active blurred');
-
-                        $.get('page-2.php',function(data){
-
-                            $('#roller').append(data);
-
-                             $('.page-2-Contents').animate({
-
-                                'opacity' : '100'
-
-                            },800, function() {
-
-                                $('.preloaderContainer').fadeOut(500);
-
-                                $('body').removeClass('blurred'); 
-
-                                $('body').addClass('page-2-active'); 
-
-                                window.location.hash = "2";
-
-                                var x =  '.' + $('.page-2-Contents').attr('class').split(' ')[0].replace('-Contents','');
-
-                                $('.menuList > li').removeClass('selectedMenuList');
-
-                                $(x).closest('li').addClass('selectedMenuList');  
-
-                                $(document).attr('title', 'Giving life to ideas - YONDU');                              
-
-                            });
-
-                        });                      
-                    
-                    
-
-                } );
-               
-               
-            } else if ( $('body').hasClass('page-2-active') ) {
-                    
-                $('.preloaderContainer').fadeIn(500);
-
-                $('.page-2-Contents').addClass('animated fadeOutLeft');
-
-                $('.page-2-Contents').animate({
-
-                    'left' : '-' + cw + 'px'
-
-                }, 400, function() {
-
-                    $(this).remove();
-
-                    $('body').removeClass('page-2-active').addClass('page-3-active blurred');
-
-                    $.get('page-3.php',function(data){
-
-                        $('#roller').append(data);
-
-                         $('.page-3-Contents').animate({
-
-                            'opacity' : '100'
-
-                        },800, function() {
-
-                            $('.preloaderContainer').fadeOut(1500);
-
-                            $('body').removeClass('blurred'); 
-
-                            $('body').addClass('page-3-active'); 
-
-                            window.location.hash = "3";
-
-                            var x =  '.' + $('.pageContentHolder').attr('class').split(' ')[0].replace('-Contents','');
-
-                            $('.menuList > li').removeClass('selectedMenuList');
-
-                            $(x).closest('li').addClass('selectedMenuList');   
-
-                            $(document).attr('title', 'Products and Services - YONDU');                          
-
-                            });
-
-                    }); 
-
-
-                } );
-
-            } else if ( $('body').hasClass('page-3-active') ) {
-
-                $('.preloaderContainer').fadeIn(500);
-
-                $('.page-3-Contents').addClass('animated fadeOutLeft');
-
-                $('.page-3-Contents').animate({
-
-                    'left' : '-' + cw + 'px'
-
-                }, 400, function() {
-
-                    $(this).remove();
-
-                    $('body').removeClass('page-3-active').addClass('page-4-active blurred');
-
-                    $.get('page-4.php',function(data){
-
-                        $('#roller').append(data);
-
-                         $('.page-4-Contents').animate({
-
-                            'opacity' : '100'
-
-                        },800, function() {
-
-                            $('.preloaderContainer').fadeOut(1500);
-
-                            $('body').removeClass('blurred'); 
-
-                            $('body').addClass('page-4-active');                       
-
-                            window.location.hash = "4";
-
-                            var x =  '.' + $('.pageContentHolder').attr('class').split(' ')[0].replace('-Contents','');
-
-                            $('.menuList > li').removeClass('selectedMenuList');
-
-                            $(x).closest('li').addClass('selectedMenuList'); 
-
-                            $(document).attr('title', 'About Us - YONDU');
-
-                        });
-
-                    }); 
-
-
-                } );
-
-            } else if ( $('body').hasClass('page-4-active') ) {
-
-                $('.preloaderContainer').fadeIn(500);
-
-                $('.page-4-Contents').addClass('animated fadeOutLeft');
-
-                $('.page-4-Contents').animate({
-
-                    'left' : '-' + cw + 'px'
-
-                }, 400, function() {
-
-                    $(this).remove();
-
-                    $('body').removeClass('page-4-active').addClass('page-5-active blurred');
-
-                    $.get('page-5.php',function(data){
-
-                        var pathname = window.location.pathname;
-
-                        var lastVal = pathname.substring(pathname.lastIndexOf('/') + 1);
-
-                        if(lastVal!='page-4.php'){
-
-                            $('#roller').append(data);
-
-                        }else{
-
-                            window.location = 'index.php#5';
-
-                        }
-
-                         $('.page-5-Contents').animate({
-
-                            'opacity' : '100'
-
-                        },800, function() {
-
-                            $('.preloaderContainer').fadeOut(1500);
-
-                            $('body').removeClass('blurred'); 
-
-                            $('body').addClass('page-5-active');                       
-
-                              window.location.hash = "5";
-
-                            var x =  '.' + $('.pageContentHolder').attr('class').split(' ')[0].replace('-Contents','');
-
-                            $('.menuList > li').removeClass('selectedMenuList');
-
-                            $(x).closest('li').addClass('selectedMenuList'); 
-
-                            $(document).attr('title', 'Get in Touch - YONDU');
-
-                        });
-
-                    }); 
-
-
-                } );
-
-            }
-         
-        });  
-
-        $('.previousPage').click(function() {
-
-            if ( $('body').hasClass('page-2-active') ) {
-
-                $('.preloaderContainer').fadeIn(500);
-
-                $('.page-2-Contents').addClass('animated fadeOutRight');
-
-                $('.page-2-Contents').animate({
-
-                    'left' :  cw + 'px'
-
-                }, 400, function() {
-
-                    $(this).remove();
-
-                    $('body').removeClass('page-2-active').addClass('page-1-active blurred');
-
-                        $.get('page-1.php',function(data){
-
-                            $('#roller').append(data);
-
-                             $('.page-1-Contents').animate({
-
-                                'opacity' : '100'
-
-                            },800, function() {
-
-                                $('.preloaderContainer').fadeOut(500);
-
-                                $('.bubble1,.bubble2,.bubble3,.bubble4,.bubble5,.ideaHolder,.secondBackGround,.page-1-textDetails').fadeIn(800);                                
-
-                                $('body').removeClass('blurred'); 
-
-                                $('body').addClass('page-1-active');
-
-                                window.location.hash = "1";
-
-                                var x =  '.' + $('.pageContentHolder').attr('class').split(' ')[0].replace('-Contents','');
-
-                                $('.menuList > li').removeClass('selectedMenuList');
-
-                                $(x).closest('li').addClass('selectedMenuList'); 
-
-                                $(document).attr('title', 'YONDU');                                 
-
-                            });
-
-                        });                      
-
-                } );
-               
-            } else if ( $('body').hasClass('page-3-active') ) {
-
-                $('.preloaderContainer').fadeIn(500);
-
-                $('.page-3-Contents').addClass('animated fadeOutRight');
-
-                $('.page-3-Contents').animate({
-
-                    'left' : cw + 'px'
-
-                }, 400, function() {
-
-                    $(this).remove();
-
-                    $('body').removeClass('page-3-active').addClass('page-2-active blurred');
-
-                    $.get('page-2.php',function(data){
-
-                        $('#roller').append(data);
-
-                         $('.page-2-Contents').animate({
-
-                            'opacity' : '100'
-
-                        },800, function() {                           
-
-                            $('.preloaderContainer').fadeOut(1500);
-
-                            /*
-                                $('.bigPlantBackGround').css({
-
-                                    'height' : '973px'
-
-                                });
-
-                                $('.plantDetails > li').fadeIn(400);
-
-                            */
-
-                            $('body').removeClass('blurred'); 
-
-                            $('body').addClass('page-2-active');                   
-
-                             window.location.hash = "2";
-
-                            var x =  '.' + $('.pageContentHolder').attr('class').split(' ')[0].replace('-Contents','');
-
-                            $('.menuList > li').removeClass('selectedMenuList');
-
-                            $(x).closest('li').addClass('selectedMenuList');
-
-                            $(document).attr('title', 'Giving life to ideas - YONDU');                               
-
-                        });
-
-                    }); 
-
-
-                } );
-
-            } else if ( $('body').hasClass('page-4-active') ) {
-
-                $('.preloaderContainer').fadeIn(500);
-
-                $('.page-4-Contents').addClass('animated fadeOutRight');
-
-                $('.page-4-Contents').animate({
-
-                    'left' : cw + 'px'
-
-                }, 400, function() {
-
-                    $(this).remove();
-
-                    $('body').removeClass('page-4-active').addClass('page-3-active blurred');
-
-                    $.get('page-3.php',function(data){
-
-                        var pathname = window.location.pathname;
-
-                        var lastVal = pathname.substring(pathname.lastIndexOf('/') + 1);
-
-                        if(lastVal!='page-4.php'){
-
-                            $('#roller').append(data);
-
-                        }else{
-
-                            window.location = 'index.php#3';
-
-                        }
-                        
-                         $('.page-3-Contents').animate({
-
-                            'opacity' : '100'
-
-                        },800, function() {
-
-                            $('.preloaderContainer').fadeOut(1500);
-
-                            $('body').removeClass('blurred'); 
-
-                            $('body').addClass('page-3-active');                       
-
-                            window.location.hash = "3"; 
-
-                            var x =  '.' + $('.pageContentHolder').attr('class').split(' ')[0].replace('-Contents','');
-
-                            $('.menuList > li').removeClass('selectedMenuList');
-
-                            $(x).closest('li').addClass('selectedMenuList');   
-
-                            $(document).attr('title', 'Products and Services - YONDU');                           
-
-                        });
-
-                    }); 
-
-
-                } );
-
-            } else if ( $('body').hasClass('page-5-active') ) {
-
-                $('.preloaderContainer').fadeIn(500);
-
-                $('.page-5-Contents').addClass('animated fadeOutRight');
-
-                $('.page-5-Contents').animate({
-
-                    'left' : cw + 'px'
-
-                }, 400, function() {
-
-                    $(this).remove();
-
-                    $('body').removeClass('page-5-active').addClass('page-4-active blurred');
-
-                    $.get('page-4.php',function(data){
-
-                        $('#roller').append(data);
-
-                         $('.page-4-Contents').animate({
-
-                            'opacity' : '100'
-
-                        },800, function() {
-
-                            $('.preloaderContainer').fadeOut(1500);
-
-                            $('body').removeClass('blurred'); 
-
-                            $('body').addClass('page-4-active');                       
-
-                             window.location.hash = "4";
-
-                            var x =  '.' + $('.pageContentHolder').attr('class').split(' ')[0].replace('-Contents','');
-
-                            $('.menuList > li').removeClass('selectedMenuList');
-
-                            $(x).closest('li').addClass('selectedMenuList'); 
-
-                            $(document).attr('title', 'About Us - YONDU');                             
-
-                        });
-
-                    }); 
-
-
-                } );
-
-            }
-
-        });          
-
-
-    }
+    }                
 
     $.fn.detectClientDevice = function() {
 
-    var isMobile = {
+        var isMobile = {
 
             Android: function() {
         
@@ -2126,27 +556,21 @@
         
         };
 
-        if(isMobile.any()){
+       if(isMobile.any()){
 
             // Mobile!
 
             $('.rightNavigationHolder, .leftNavigationHolder').hide();
-            
-            var hash = location.hash;
 
             var cw = $('body').outerWidth();
 
-            var cp;
+            var bid = $('body').attr('id');        
 
-            var cookie;
-
-            var currentClass;        
-
-            $('#roller').swipe( {
+            $('body').swipe( {
                             //Generic swipe handler for all directions
                 swipeLeft:function() {
 
-                    if ( hash != '#5' ) {
+                    if ( bid != 'page5' ) {
 
                         var docWidth = $('body').outerWidth();
 
@@ -2156,262 +580,21 @@
 
                         }, 300, function() {
 
-                            if ( hash == '#1' ) {
+                            if ( bid == 'page1' ) {
 
-                                $('.preloaderContainer').fadeIn(500);
+                                 window.location.href = p2;
 
-                                $('.page-1-Contents').addClass('animated fadeOutLeft');
+                            } else if ( bid == 'page2' ) {
 
-                                $('.page-1-Contents').animate({
+                                 window.location.href = p3;
 
-                                    'left' : '-' + cw + 'px'
+                            } else if ( bid == 'page3' ) {
 
-                                }, 400, function() {
+                                 window.location.href = p4;
 
-                                    $(this).remove();
+                            } else if ( bid == 'page4' ) {
 
-                                    $('body').removeClass('page-1-active').addClass('page-2-active blurred');
-
-                                        window.location.hash = "2";
-
-                                        $.get('page-2.php',function(data){
-
-                                            $('#roller').append(data);
-
-                                             $('.page-2-Contents').animate({
-
-                                                'opacity' : '100'
-
-                                            },800, function() {
-
-                                                $('.preloaderContainer').fadeOut(500);
-
-                                                $('body').removeClass('blurred'); 
-
-                                                $('body').addClass('page-2-active'); 
-
-                                                var x =  '.' + $('.page-2-Contents').attr('class').split(' ')[0].replace('-Contents','');
-
-                                                $('.menuList > li').removeClass('selectedMenuList');
-
-                                                $(x).closest('li').addClass('selectedMenuList');  
-
-                                                $(document).attr('title', 'Giving life to ideas - YONDU');                              
-
-                                            });
-
-                                        });                      
-                                    
-                                    
-
-                                } );
-
-                            } else if ( hash == '#2' ) {
-                        
-                                $('.preloaderContainer').fadeIn(500);
-
-                                $('.page-2-Contents').addClass('animated fadeOutLeft');
-
-                                $('.page-2-Contents').animate({
-
-                                    'left' : '-' + cw + 'px'
-
-                                }, 400, function() {
-
-                                    $(this).remove();
-
-                                    $('body').removeClass('page-2-active').addClass('page-3-active blurred');
-
-                                    window.location.hash = "3";                                
-
-                                    $.get('page-3.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-3-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(1500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-3-active'); 
-
-                                            var x =  '.' + $('.pageContentHolder').attr('class').split(' ')[0].replace('-Contents','');
-
-                                            $('.menuList > li').removeClass('selectedMenuList');
-
-                                            $(x).closest('li').addClass('selectedMenuList');   
-
-                                            $(document).attr('title', 'Products and Services - YONDU');                          
-
-                                            });
-
-                                    }); 
-
-
-                                } );
-
-                            } else if ( hash == '#3' ) {
-
-                                $('.preloaderContainer').fadeIn(500);
-
-                                $('.page-3-Contents').addClass('animated fadeOutLeft');
-
-                                $('.page-3-Contents').animate({
-
-                                    'left' : '-' + cw + 'px'
-
-                                }, 400, function() {
-
-                                    $(this).remove();
-
-                                    $('body').removeClass('page-3-active').addClass('page-4-active blurred');
-
-                                    window.location.hash = "4";                                
-
-                                    $.get('page-4.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-4-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(1500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-4-active');                       
-
-                                            var x =  '.' + $('.pageContentHolder').attr('class').split(' ')[0].replace('-Contents','');
-
-                                            $('.menuList > li').removeClass('selectedMenuList');
-
-                                            $(x).closest('li').addClass('selectedMenuList'); 
-
-                                            $(document).attr('title', 'About Us - YONDU');
-
-                                        });
-
-                                    }); 
-
-
-                                } );
-
-                            } else if ( hash == '#4' ) {
-
-                                $('.preloaderContainer').fadeIn(500);
-
-                                $('.page-4-Contents').addClass('animated fadeOutLeft');
-
-                                $('.page-4-Contents').animate({
-
-                                    'left' : '-' + cw + 'px'
-
-                                }, 400, function() {
-
-                                    $(this).remove();
-
-                                    $('body').removeClass('page-4-active').addClass('page-5-active blurred');
-
-                                    window.location.hash = "5";                                
-
-                                    $.get('page-5.php',function(data){
-
-                                        var pathname = window.location.pathname;
-
-                                        var lastVal = pathname.substring(pathname.lastIndexOf('/') + 1);
-
-                                        if(lastVal!='page-4.php'){
-
-                                            $('#roller').append(data);
-
-                                        }else{
-
-                                            window.location = 'index.php#5';
-
-                                        }
-
-                                         $('.page-5-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(1500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-5-active');                       
-
-                                            var x =  '.' + $('.pageContentHolder').attr('class').split(' ')[0].replace('-Contents','');
-
-                                            $('.menuList > li').removeClass('selectedMenuList');
-
-                                            $(x).closest('li').addClass('selectedMenuList'); 
-
-                                            $(document).attr('title', 'Get in Touch - YONDU');
-
-                                        });
-
-                                    }); 
-
-
-                                } );
-
-                                $('.preloaderContainer').fadeIn(500);
-
-                                $('.page-2-Contents').addClass('animated fadeOutRight');
-
-                                $('.page-2-Contents').animate({
-
-                                    'left' :  cw + 'px'
-
-                                }, 400, function() {
-
-                                    $(this).remove();
-
-                                    $('body').removeClass('page-2-active').addClass('page-1-active blurred');
-
-                                        $.get('page-1.php',function(data){
-
-                                            $('#roller').append(data);
-
-                                             $('.page-1-Contents').animate({
-
-                                                'opacity' : '100'
-
-                                            },800, function() {
-
-                                                $('.preloaderContainer').fadeOut(500);
-
-                                                $('.bubble1,.bubble2,.bubble3,.bubble4,.bubble5,.ideaHolder,.secondBackGround,.page-1-textDetails').fadeIn(800);                                
-
-                                                $('body').removeClass('blurred'); 
-
-                                                $('body').addClass('page-1-active');
-
-                                                window.location.hash = "1";
-
-                                                var x =  '.' + $('.pageContentHolder').attr('class').split(' ')[0].replace('-Contents','');
-
-                                                $('.menuList > li').removeClass('selectedMenuList');
-
-                                                $(x).closest('li').addClass('selectedMenuList'); 
-
-                                                $(document).attr('title', 'YONDU');                                 
-
-                                            });
-
-                                        });                      
-
-                                } );
+                                 window.location.href = p5;
                             
                             }
 
@@ -2424,7 +607,7 @@
 
                 swipeRight:function() {
 
-                    if ( hash != '#1' ) {
+                    if ( bid != 'page1' ) {
 
                         var docWidth = $('body').outerWidth();
 
@@ -2434,214 +617,23 @@
 
                         }, 300, function() {
 
-                            if ( hash == '#5' ) {
+                            if ( bid == 'page5' ) {
 
-                                $('.preloaderContainer').fadeIn(500);
+                                console.log('x');
 
-                                $('.page-5-Contents').addClass('animated fadeOutRight');
+                                 window.location.href = p4;
 
-                                $('.page-5-Contents').animate({
+                            } else if ( bid == 'page4' ) {
 
-                                    'left' : cw + 'px'
+                                 window.location.href = p3;
 
-                                }, 400, function() {
+                            } else if ( bid == 'page3' ) {
 
-                                    $(this).remove();
+                                 window.location.href = p2;
 
-                                    $('body').removeClass('page-5-active').addClass('page-4-active blurred');
+                            } else if ( bid == 'page2' ) {
 
-                                    window.location.hash = "4";                                
-
-                                    $.get('page-4.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-4-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(1500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-4-active');                       
-
-                                            var x =  '.' + $('.pageContentHolder').attr('class').split(' ')[0].replace('-Contents','');
-
-                                            $('.menuList > li').removeClass('selectedMenuList');
-
-                                            $(x).closest('li').addClass('selectedMenuList'); 
-
-                                            $(document).attr('title', 'About Us - YONDU');                             
-
-                                        });
-
-                                    }); 
-
-
-                                } );
-
-                            } else if ( hash == '#4' ) {
-
-                                $('.preloaderContainer').fadeIn(500);
-
-                                $('.page-4-Contents').addClass('animated fadeOutRight');
-
-                                $('.page-4-Contents').animate({
-
-                                    'left' : cw + 'px'
-
-                                }, 400, function() {
-
-                                    $(this).remove();
-
-                                    $('body').removeClass('page-4-active').addClass('page-3-active blurred');
-
-                                    window.location.hash = "3";                                
-
-                                    $.get('page-3.php',function(data){
-
-                                        var pathname = window.location.pathname;
-
-                                        var lastVal = pathname.substring(pathname.lastIndexOf('/') + 1);
-
-                                        if(lastVal!='page-4.php'){
-
-                                            $('#roller').append(data);
-
-                                        }else{
-
-                                            window.location = 'index.php#3';
-
-                                        }
-                                        
-                                         $('.page-3-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {
-
-                                            $('.preloaderContainer').fadeOut(1500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-3-active');                       
-
-                                            var x =  '.' + $('.pageContentHolder').attr('class').split(' ')[0].replace('-Contents','');
-
-                                            $('.menuList > li').removeClass('selectedMenuList');
-
-                                            $(x).closest('li').addClass('selectedMenuList');   
-
-                                            $(document).attr('title', 'Products and Services - YONDU');                           
-
-                                        });
-
-                                    }); 
-
-
-                                } );
-
-                            } else if ( hash == '#3' ) {
-
-                                $('.preloaderContainer').fadeIn(500);
-
-                                $('.page-3-Contents').addClass('animated fadeOutRight');
-
-                                $('.page-3-Contents').animate({
-
-                                    'left' : cw + 'px'
-
-                                }, 400, function() {
-
-                                    $(this).remove();
-
-                                    $('body').removeClass('page-3-active').addClass('page-2-active blurred');
-
-                                    window.location.hash = "2";                                
-
-                                    $.get('page-2.php',function(data){
-
-                                        $('#roller').append(data);
-
-                                         $('.page-2-Contents').animate({
-
-                                            'opacity' : '100'
-
-                                        },800, function() {                           
-
-                                            $('.preloaderContainer').fadeOut(1500);
-
-                                            $('body').removeClass('blurred'); 
-
-                                            $('body').addClass('page-2-active');                   
-
-                                            var x =  '.' + $('.pageContentHolder').attr('class').split(' ')[0].replace('-Contents','');
-
-                                            $('.menuList > li').removeClass('selectedMenuList');
-
-                                            $(x).closest('li').addClass('selectedMenuList');
-
-                                            $(document).attr('title', 'Giving life to ideas - YONDU');                               
-
-                                        });
-
-                                    }); 
-
-
-                                } );
-
-                            } else if ( hash == '#2' ) {
-
-                                $('.preloaderContainer').fadeIn(500);
-
-                                $('.page-2-Contents').addClass('animated fadeOutRight');
-
-                                $('.page-2-Contents').animate({
-
-                                    'left' :  cw + 'px'
-
-                                }, 400, function() {
-
-                                    $(this).remove();
-
-                                    $('body').removeClass('page-2-active').addClass('page-1-active blurred');
-
-                                        window.location.hash = "1";                                
-
-                                        $.get('page-1.php',function(data){
-
-                                            $('#roller').append(data);
-
-                                             $('.page-1-Contents').animate({
-
-                                                'opacity' : '100'
-
-                                            },800, function() {
-
-                                                $('.preloaderContainer').fadeOut(500);
-
-                                                $('.bubble1,.bubble2,.bubble3,.bubble4,.bubble5,.ideaHolder,.secondBackGround,.page-1-textDetails').fadeIn(800);                                
-
-                                                $('body').removeClass('blurred'); 
-
-                                                $('body').addClass('page-1-active');
-
-                                                var x =  '.' + $('.pageContentHolder').attr('class').split(' ')[0].replace('-Contents','');
-
-                                                $('.menuList > li').removeClass('selectedMenuList');
-
-                                                $(x).closest('li').addClass('selectedMenuList'); 
-
-                                                $(document).attr('title', 'YONDU');                                 
-
-                                            });
-
-                                        });                      
-
-                                } );
+                                 window.location.href = p1;
 
                             }
 
@@ -2665,7 +657,77 @@
         
         }
 
-    }    
+    }  
+
+    $.fn.animatePage = function() {
+
+        var cw = $('body').outerWidth();
+
+        var bid = $('body').attr('id');
+
+        var pc = $('.pageContentHolder');    
+
+        $('.nextPage').click(function() {
+
+            pc.animate({
+
+                'marginLeft' : '-' + cw + 'px'
+
+            },300, function() {
+
+                if ( bid == 'page1' ) {
+
+                    window.location.href = p2;
+
+                } else if ( bid == 'page2') {
+
+                    window.location.href = p3;
+
+                } else if ( bid == 'page3' ) {
+
+                    window.location.href = p4;
+
+                } else if ( bid == 'page4' ) {
+
+                    window.location.href = p5
+
+                }
+
+            });
+
+        });
+
+        $('.previousPage').click(function() {
+
+            pc.animate({
+
+                'marginLeft' : cw + 'px'
+
+            },300, function() {
+
+                if ( bid == 'page5' ) {
+
+                    window.location.href = p4;
+
+                } else if ( bid == 'page4') {
+
+                    window.location.href = p3;
+
+                } else if ( bid == 'page3' ) {
+
+                    window.location.href = p2;
+
+                } else if ( bid == 'page2' ) {
+
+                    window.location.href = p1
+
+                }
+
+            });            
+
+        });
+
+    } 
 
 
 

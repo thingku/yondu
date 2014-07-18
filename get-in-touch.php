@@ -2,30 +2,27 @@
 <html>
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">		
-	<title>Welcome to YONDU</title>
-
-	<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-	<script type="text/javascript" src="js/modernizr.custom.js"></script>
-	<script type="text/javascript" src="js/library.js"></script>
-	<script type="text/javascript" src='js/main.js'></script>
-
+	<title>YONDU | Get in touch</title>
 	<link rel="stylesheet" href="js/font-awesome/css/font-awesome.min.css"/>
 	<link rel="stylesheet" media="all" href="css/main.css"/>
-	
-	<script type="text/javascript">
-
-		$(document).ready(function(e){ 	
-
-			$().navigatePage();
-			
-			$().mainMenu();		
-		});
-
-	</script>
-
 </head>
-<body id="page5" class='page-5-active'>
+<body id="page5" class='page-5-active blurred'>
+
+	<div class="preloaderContainer">
+
+		<div class="preloaderHolder">
+
+			<div class="preloader">
+
+				<img src="images/ajax-loader.gif" />
+
+			</div>
+
+		</div>
+
+	</div>	
 
 	<?php include 'mainmenu.php'; ?>
 
@@ -302,4 +299,26 @@
 
 	?>
 </body>
+
+	<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="js/modernizr.custom.js"></script>
+	<script type="text/javascript" src="js/library.js"></script>
+	<script type="text/javascript" src='js/main.js'></script>
+	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>	
+	<script type="text/javascript">
+
+		$(document).ready(function(e){ 	
+
+			$().animatePage();
+			
+			$().mainMenu();	
+
+			$().page5();
+
+			$().detectClientDevice();
+
+		});
+
+	</script>
+
 </html>
