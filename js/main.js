@@ -82,47 +82,228 @@ $(document).ready(function(){
         
         if(selected==1){
 
-        	$('#fdate').removeClass('dsable');
+        	/*$('#fdate').removeClass('dsable');
         	$('#sdate').removeClass('dsable');
         	$('.dateForm2').prop("disabled", false);
 
         	$('#authPanel').addClass('dsable');
         	$('#authtext').prop("disabled", true);
             $('#catPanel').addClass('dsable');
-            $('#catOption').prop("disabled", true);
+            $('#catOption').prop("disabled", true);*/
+
+            if ($(".author")[0]){
+              
+                $(".categoryOption2").animate({
+
+                    'opacity':0,
+                    'marginTop':'-35px'
+
+                },200,function(){
+
+                    $(".categoryOption2").hide();
+
+                    $( ".author" ).animate({
+
+                        'opacity':0,
+                        'marginTop':'-70px'
+
+                    },200,function(){
+
+                        $(".author").hide();
+
+                        $(".allArticles-dateForm").show();
+
+                         $( ".allArticles-dateForm" ).animate({
+
+                            'opacity':1,
+                            'marginTop':0
+
+                         },500);
+                    });
+
+                  });
+
+            }else{
+
+                $(".categoryOption2").animate({
+
+                    'opacity':0,
+                    'marginTop':'-35px'
+
+                },200,function(){
+
+                    $(".categoryOption2").hide();
+
+                        $(".author").hide();
+
+                        $(".allArticles-dateForm").show();
+
+                         $( ".allArticles-dateForm" ).animate({
+
+                            'opacity':1,
+                            'marginTop':0
+
+                         },500);
+
+                  });
+
+
+            }
+
+           
 
         }else if (selected==2){
 
-        	$('#authPanel').removeClass('dsable');
+        	/*$('#authPanel').removeClass('dsable');
         	$('#authtext').prop("disabled", false);
 
         	$('#fdate').addClass('dsable');
         	$('#sdate').addClass('dsable');
         	$('.dateForm2').prop("disabled", true);
             $('#catPanel').addClass('dsable');
-            $('#catOption').prop("disabled", true);
+            $('#catOption').prop("disabled", true);*/
+
+           $( ".categoryOption2" ).animate({
+
+                'opacity':0,
+                'marginTop':'-35px'
+
+             },200,function(){
+
+                $(".categoryOption2").hide();
+
+                $( ".allArticles-dateForm" ).animate({
+
+                    'opacity':0,
+                    'marginTop':'-35px'
+
+                },200,function(){
+
+                    $(".allArticles-dateForm").hide();
+                    
+                    $(".author").show();
+
+                     $( ".author" ).animate({
+
+                        'opacity':1,
+                        'marginTop':'-38px'
+
+                     },500);
+
+                });
+
+            });
 
         }else if (selected==3){
 
-            $('#authPanel').addClass('dsable');
+           /* $('#authPanel').addClass('dsable');
             $('#authtext').prop("disabled", true);
 
             $('#fdate').addClass('dsable');
             $('#sdate').addClass('dsable');
             $('.dateForm2').prop("disabled", true);
             $('#catPanel').addClass('dsable');
-            $('#catOption').prop("disabled", false);
+            $('#catOption').prop("disabled", false);*/
+
+            if ($(".author")[0]){
+
+                $( ".allArticles-dateForm" ).animate({
+
+                    'opacity':0,
+                    'marginTop':'-35px'
+
+                },200,function(){
+
+                    $(".allArticles-dateForm").hide();
+
+                    $( ".author" ).animate({
+
+                        'opacity':0,
+                        'marginTop':'-70px'
+
+                    },200,function(){
+
+                        $(".author").hide();
+
+                        $(".categoryOption2").show();
+
+                        $( ".categoryOption2" ).animate({
+
+                            'opacity':1,
+                            'marginTop':0
+
+                        },500);
+
+                    });
+
+                });
+
+            }else{
+
+                $( ".allArticles-dateForm" ).animate({
+
+                    'opacity':0,
+                    'marginTop':'-35px'
+
+                },200,function(){
+
+                    $(".allArticles-dateForm").hide();
+
+                    $(".author").hide();
+
+                    $(".categoryOption2").show();
+
+                    $( ".categoryOption2" ).animate({
+
+                        'opacity':1,
+                        'marginTop':0
+
+                    },500);
+
+                });
+
+            }
 
         }else{
 
-        	$('#authPanel').addClass('dsable');
-        	$('#authtext').prop("disabled", true);
 
-        	$('#fdate').addClass('dsable');
-        	$('#sdate').addClass('dsable');	
-        	$('.dateForm2').prop("disabled", true);
-            $('#catPanel').addClass('dsable');
-            $('#catOption').prop("disabled", true);
+            if ($(".author")[0]){
+
+                $( ".author" ).animate({
+
+                    'opacity':0,
+                    'marginTop':'-70px'
+
+                },200,function(){
+
+                    $(".author").hide();
+
+                });
+
+            }
+
+        	 $( ".allArticles-dateForm" ).animate({
+
+                'opacity':0,
+                'marginTop':'-39px'
+
+             },300,function(){
+
+                 $( ".allArticles-dateForm" ).hide();
+
+             });
+
+            $( ".categoryOption2" ).animate({
+
+                'opacity':0,
+                'marginTop':'-35px'
+
+            },300,function(){
+
+
+                $( ".categoryOption2" ).hide();
+
+            });
 
         }
 
@@ -423,4 +604,45 @@ $(document).ready(function(){
 
        
     });
+
+    if(GetURLParameter('sort')){
+
+        var sort = GetURLParameter('sort');
+
+
+        if(sort==1){
+
+            $( ".allArticles-dateForm" ).show();
+
+            $( ".allArticles-dateForm" ).css({
+
+                'opacity':1,
+                'margin-top':'0px'
+
+            });
+
+        }else if(sort==2){
+
+            $( ".author" ).show();
+
+            $( ".author" ).css({
+
+                'opacity':1,
+                'margin-top':'-38px'
+
+            });
+
+        }else if(sort==3){
+
+            $( ".categoryOption2" ).show();
+
+            $( ".categoryOption2" ).css({
+
+                'opacity':1,
+                'margin-top':'0px'
+
+            });
+
+        } 
+    }
 });

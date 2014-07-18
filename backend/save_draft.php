@@ -66,10 +66,13 @@ if(isset($_SESSION['datalog'])){
 		$content=$_POST['content'];
 		$state=$_POST['state'];
 		$type=$_POST['type'];
+		$categoryOption = $_POST['categoryOption'];
 
 		include("../news/connection.php");
+		//echo $state;
 		$q=mysqli_query($con,"CALL updateArticle('".$article_id."','".$title."','".$content."','".$state."','1','".$categoryOption."')");
 		
+		//echo "CALL updateArticle('".$article_id."','".$title."','".$content."','".$state."','1','".$categoryOption."')";
 		if($type=="none"){
 
 			header("location:../news/allArticles.php");

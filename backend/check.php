@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 	if(isset($_POST['login'])){
 
 		$username=$_POST['username'];
@@ -7,7 +7,7 @@
 
 		include("../news/connection.php");
 		$q=mysqli_query($con,"CALL GetUser('".$username."','1')");
-		mysql_close($con);
+		mysqli_close($con);
 		
 		if(mysqli_num_rows($q)>0){
 			
@@ -74,4 +74,5 @@
 		header("location:../index.php#4");
 
 	}
+ob_end_flush();
 ?>

@@ -7,22 +7,15 @@
 	width:50%;
 	height:100px;
 }
-.facebookHolder{
-	float:left;
+.iconsHolder{
 	cursor: pointer;
-	margin: 30px 96px;
+	margin: 0 auto;
+	width: 215px;
 }
-.twitterHolder{
-	float:left;
-	cursor: pointer;
-	margin: 30px
-}
-.facebook{
-	width: 169px;
-	height: 40px;
-}
-.twitter{
-	width: 169px;
-	height: 40px;
+
+.iconsHolder img{
+
+margin:25px;
 
 }
+

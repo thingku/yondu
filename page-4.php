@@ -115,7 +115,56 @@
 				</div>		
 
 			</section>
-			
+				<?php
+					
+					include('news/connection.php');	
+
+					session_start();
+
+					$adjacents = 3;
+					
+					 $query = "CALL countArticleNoFilter()";
+					 
+					
+					$total_pages = mysqli_fetch_array(mysqli_query($con,$query));
+					$total_pages = $total_pages["num"];
+					
+					$_SESSION['old_count_articles']=$total_pages;
+
+					/* Setup vars for query. */
+					$targetpage = "page-4.php"; 
+					//$targetpage = 'index.php';	
+
+					$limit = 3;
+
+					$page=0;
+
+					if(isset($_GET['page'])) 
+
+						$page = $_GET['page'];
+
+					if($page) 
+
+						$start = ($page - 1) * $limit; 	
+
+					else
+
+						$start = 0;								
+					
+					/* Get data. */
+					include("news/connection.php");
+
+					$sql = "CALL getAllArticleNews('".$start."','".$limit."')";
+					 
+					$result = mysqli_query($con,$sql);
+					
+					include("news/paging2.php");
+
+				?>
+
+				<input type='hidden' class='index-start' value='<?php echo $start; ?>'/>
+				<input type='hidden' class='index-limit' value='<?php echo $limit; ?>'/>
+
 				<section class="page-4-bottomContentHolder">
 					
 					<div class="page-4-contentsDetails1">
@@ -140,7 +189,85 @@
 
 							<!-- <div class="loginBtn">Login</div> -->
 
-								<ul class="newAndUpdatesList">
+							<?php
+						
+								if(mysqli_num_rows($result)>0){
+
+							?>	
+									<ul class="newAndUpdatesList">
+										<?php		
+										$arrayId=array();
+
+										while($getq = mysqli_fetch_array($result)){
+
+											if (in_array($getq['article_id'], $arrayId)) {
+
+													  continue;
+
+											}else{
+
+												array_push($arrayId, $getq['article_id']);
+
+											}
+										?>
+											<li class='class-<?php echo $getq["article_id"]; ?>'>
+
+												<div class="newUpdatesTitle">
+
+													<a href="#">
+
+														<?php
+
+															echo strip_tags($getq['title']);
+
+														 ?>
+
+													</a>
+
+												</div>
+
+												<div class="newUpdatesText">
+
+													<?php
+
+														$string=$getq['content'];
+														
+														if (strlen($string) > 500){
+
+															echo strip_tags(substr($string,0,500)).'...';
+
+													?>
+														
+															<a href='news/view_full_article.php?id=<?php echo $getq["article_id"]; ?>&page=<?php echo $page; ?>' class='seeMore'>See more </a>
+													
+													<?php
+
+														} else{
+
+															echo strip_tags($string);
+
+														}	
+
+													?>
+
+												</div>
+
+											</li>
+
+										<?php
+
+										}
+
+										?>
+									</ul>
+									
+							<?php
+
+								}
+
+							?>
+							<?=$pagination?>
+								<!-- <ul class="newAndUpdatesList">
 									
 									<li>
 
@@ -214,7 +341,7 @@
 
 									</li>
 
-								</ul>
+								</ul> -->
 									
 						</div>
 

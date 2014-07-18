@@ -152,17 +152,17 @@ if(isset($_SESSION['datalog'])){
 								</div>
 								
 
-								<div class='allArticles-dateForm dsable' id='fdate'>
-									<label class='label-form '>Start: </label> <input value='<?php if(isset($_GET["startdate"])) echo $_GET["startdate"]; ?>' disabled type='date' name='startDate' class='dateForm2' />
+								<div class='allArticles-dateForm' id='fdate'>
+									<label class='label-form '>Start: </label> <input value='<?php if(isset($_GET["startdate"])) echo $_GET["startdate"]; ?>'  type='date' name='startDate' class='dateForm2' />
 								</div>
-								<div class='allArticles-dateForm dsable' id='sdate'>
-									<label class='label-form'>End: </label> <input value='<?php if(isset($_GET["enddate"])) echo $_GET["enddate"]; ?>' disabled type='date' name='endDate' class='dateForm2'/>
+								<div class='allArticles-dateForm' id='sdate'>
+									<label class='label-form'>End: </label> <input value='<?php if(isset($_GET["enddate"])) echo $_GET["enddate"]; ?>'  type='date' name='endDate' class='dateForm2'/>
 								</div>
 								<div><input type='submit' class='btn btn-success btnSort' name='sort' value='View'/></div>
 								
-								<div class='categoryOption2 dsable' id='catPanel'>
+								<div class='categoryOption2' id='catPanel'>
 
-									<select disabled name='catName' class='form-control' id='catOption'>
+									<select name='catName' class='form-control' id='catOption'>
 										
 										<option value='0'>---</option>
 										

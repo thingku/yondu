@@ -20,12 +20,13 @@
 div.pagination {
 	padding: 3px;
 	margin: 3px;
+	float: right;
 }
 div.pagination2 {
 	/*position: relative;*/
 	float:right;
 }
-div.pagination,div.pagination2 a {
+div.pagination a,div.pagination2 a {
 	padding: 2px 5px 2px 5px;
 	margin: 2px;
 	border: 1px solid #AAAADD;
@@ -34,11 +35,11 @@ div.pagination,div.pagination2 a {
 	text-decoration: none; /* no underline */
 	color: #444;
 }
-div.pagination,div.pagination2 a:hover, div.pagination,div.pagination2 a:active {
+div.pagination a:hover,div.pagination2 a:hover, div.pagination a:active,div.pagination2 a:active {
 	border: 1px solid #efab17;
 	color: #444;
 }
-div.pagination,div.pagination2 span.current {
+div.pagination span.current,div.pagination2 span.current {
 	padding: 2px 5px 2px 5px;
 	margin: 2px;
 	border: 1px solid #efab17;
@@ -47,7 +48,7 @@ div.pagination,div.pagination2 span.current {
 	background-color: #efab17;
 	color: #FFF;
 }
-div.pagination,div.pagination2 span.disabled {
+div.pagination span.disabled,div.pagination2 span.disabled {
 	padding: 2px 5px 2px 5px;
 	margin: 2px;
 	border: 1px solid #EEE;

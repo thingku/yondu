@@ -45,16 +45,15 @@
 
 					<div class="socialMediaHolder">
 
-						<div class="facebookHolder">
+						<div class="iconsHolder">
 
-							<img src="../images/fb-whole.png" class='facebook'>
+							<a href="https://www.facebook.com/yonduphilippines"><img src="../images/socialmedia/fb.png"></a>
 
-						</div>
+							<a href="https://twitter.com/yonduph"><img src="../images/socialmedia/twitter.png"></a>
 
-						<div class="twitterHolder">
+							<!-- <a href="https://twitter.com/yonduph"><img src="../images/socialmedia/twitter.png"></a>
 
-							<img src="../images/twitter-whole.jpg" class='twitter'>
-
+							<a href="https://twitter.com/yonduph"><img src="../images/socialmedia/twitter.png"></a> -->
 						</div>
 
 					</div>
